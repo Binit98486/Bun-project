@@ -8,10 +8,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "480px",
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      colors: {
+        "primary-red": "#DC143C",
+        "primary-gray": "rgb(24, 26, 27)",
+        "text-blue": "#000033",
+        "text-peruvian": "#003333",
+        "currency": "#3CCF4E",
+        "icon": "#071952"
       },
     },
   },
