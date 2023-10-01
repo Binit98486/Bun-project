@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=DynaPuff&display=swap");
+@import url('https://fonts.google.com/specimen/Libre+Baskerville');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -22,3 +26,86 @@
       transparent,
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 } */
+
+
+
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+@layer utilities {
+  /* for hiding the scroll bar : needs to be applied to the div where scrollbar needs to hide */
+
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  ::-webkit-datetime-edit {
+    color: rgb(114, 113, 113);
+  }
+
+  ::-webkit-datetime-edit-text {
+    /* color: red; */
+    padding: 0 0.3em;
+  }
+
+  input#session-date {
+    display: inline-block;
+    position: relative;
+  }
+
+  input[type='date']::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+  }
+
+  /* skeletal css */
+
+  .animate-shimmer {
+    background-image: linear-gradient(90deg,
+        #e7edf1 0px,
+        #f7f6fa 200px,
+        #e7edf1 400px);
+    background-size: 1200px;
+    animation: shimmer 1.5s infinite linear;
+  }
+
+  .dark-animate-shimmer {
+    background-image: linear-gradient(90deg,
+        #524f4f 0px,
+        #807c7c 200px,
+        #524f4f 400px);
+    background-size: 1200px;
+    animation: shimmer 1.5s infinite linear;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -400px;
+    }
+
+    50% {
+      background-position: 400px;
+    }
+
+    100% {
+      background-position: 700px;
+    }
+  }
+}

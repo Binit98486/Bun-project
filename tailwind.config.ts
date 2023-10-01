@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        xs: "480px",
+        xs: "375px",
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -24,8 +24,15 @@ const config: Config = {
         "currency": "#3CCF4E",
         "icon": "#071952"
       },
+      fontFamily: {
+        poppins: ["Poppins"],
+        dyan: ["DynaPuff"],
+        allura: ["Allura"],
+        libre: ['Libre+Baskerville']
+      },
     },
   },
   plugins: [],
+  darkMode: 'class',
 }
 export default config

@@ -80,7 +80,7 @@ const Navbar: React.FunctionComponent = () => {
                                     <div className=" hover:text-primary-red">Portfolio</div>
                                 </Link>
 
-                                <Link href="/">   <button className="border border-2 bg-gray-400 rounded-md p-1 hover:text-cyan-600 hover:ring-2 ring-pink-500">Login
+                                <Link href="/account/login">   <button className="border border-2 bg-gray-400 rounded-md p-1 hover:text-cyan-600 hover:ring-2 ring-pink-500">Login
 
                                 </button></Link>
                             </div>

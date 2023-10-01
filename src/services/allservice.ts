@@ -1,11 +1,9 @@
 import { ApiEndPoints } from "../config/apiconfig";
 import request from "../config/request";
-
-const qs = require("qs");
 interface ApiResponse {
     data?: any;
-    Message: string;
-    Code: number;
+    error: boolean;
+    message: string;
 }
 
 class AllService {
@@ -17,23 +15,23 @@ class AllService {
 
         } catch (error: any) {
             return {
-                Message: error.error,
+                error: error.error,
                 data: null,
-                Code: error.Code
+                message: error.message
             }
 
         }
     }
     public async Post(API: string, formData: any): Promise<ApiResponse> {
         try {
-            const response = await (await request()).post(ApiEndPoints.api + API, qs.stringify(formData))
+            const response = await (await request()).post(ApiEndPoints.api + API, JSON.stringify(formData))
             return response.data
 
         } catch (error: any) {
             return {
-                Message: error.Message,
+                error: error.error,
                 data: null,
-                Code: error.Code
+                message: error.message
             }
 
         }
@@ -45,9 +43,9 @@ class AllService {
 
         } catch (error: any) {
             return {
-                Message: error.Message,
+                error: error.error,
                 data: null,
-                Code: error.Code
+                message: error.message
             }
 
         }
@@ -60,9 +58,9 @@ class AllService {
 
         } catch (error: any) {
             return {
-                Message: error.Message,
+                error: error.error,
                 data: null,
-                Code: error.Code
+                message: error.message
             }
 
         }

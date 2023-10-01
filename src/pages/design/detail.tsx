@@ -33,7 +33,13 @@ const Detail = () => {
                 </div>
 
             </div>
-            <Presets />
+            <div className="flex flex-row">
+
+                <Presets />
+
+            </div>
+
+
 
 
 
