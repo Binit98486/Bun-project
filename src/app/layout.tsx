@@ -19,8 +19,10 @@ export default function Layout({
         <>
             <div className="bg-[#DBD6CB]">
 
-                <Navbar />
-                <div className=" mx-5 md:mx-10 lg:mx-16 mt-20">
+                {/* <Navbar /> */}
+                <div className="">
+                    {/* <div className=" mx-5 md:mx-10 lg:mx-16 mt-20"> */}
+
                     {children}
                 </div>
             </div>

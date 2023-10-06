@@ -28,7 +28,11 @@ const config: Config = {
         poppins: ["Poppins"],
         dyan: ["DynaPuff"],
         allura: ["Allura"],
-        libre: ['Libre+Baskerville']
+        libre: ['Libre+Baskerville'],
+        calligraphy: ['Calligraffitti', 'cursive'],
+        script: ['Rouge Script', 'cursive'],
+        lobster: ['Lobster', 'cursive'],
+        mouiser: ['Monsieur La Doulaise', 'cursive']
       },
     },
   },
