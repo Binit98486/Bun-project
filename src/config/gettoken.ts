@@ -14,19 +14,20 @@ interface ApiResponse {
 export default class TokenManager {
     public async GetToken(): Promise<ApiResponse> {
         try {
-            var url = ApiEndPoints.baseUrl + '/connect/token';
+            var url = ApiEndPoints.baseUrl + '/refresh-tokens';
             var param = {
                 client_id: 'client',
                 client_secret: 'secret',
                 grant_type: 'client_credentials'
             }
-            const res = await axios.post(url, qs.stringify(param)
+            const res = await axios.post(url, JSON.stringify(param)
             );
             const response = await res.data;
+
             window.localStorage.setItem("token", JSON.stringify(response));
             return {
                 access_token: response.access_token, code: 200, message: ""
-            };
+            }
         } catch (error: any) {
             return {
                 access_token: "null", code: 500, message: "network error"

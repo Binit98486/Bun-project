@@ -72,7 +72,7 @@ const Navbar: React.FunctionComponent = () => {
 
                                     <div className=" hover:text-primary-red">Our Wedding</div>
                                 </Link>
-                                <Link href="/">
+                                <Link href="/invitation/invitationdetail">
                                     <div className=" hover:text-primary-red">Design</div>
                                 </Link>
 

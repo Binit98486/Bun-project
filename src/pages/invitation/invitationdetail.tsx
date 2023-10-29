@@ -6,12 +6,13 @@ import wall3 from "../../../public/assets/images/wall3.jpg"
 import wall4 from "../../../public/assets/images/wall4.jpg"
 import { AiFillInstagram } from "react-icons/ai"
 import Link from "next/link"
-import { GiTimeTrap } from 'react-icons/gi'
 import { motion, useAnimationControls } from "framer-motion"
 import { useInView } from 'react-intersection-observer'
 import { useEffect } from "react"
 import { useForm } from "react-hook-form"
 import { RiSendPlaneFill } from 'react-icons/ri'
+import WeddingLocation from "@/components/components/map/map"
+import EventDate from "@/components/components/design/eventcountdown"
 
 
 
@@ -175,22 +176,16 @@ const InvitationDetail = () => {
         </div>
 
 
+        <EventDate />
 
-        <div className="h-screen bg-gray-300">
+        {/* <div className="h-screen bg-gray-300">
             <div className="flex flex-col justify-center items-center h-full">
                 <div className="text-xl md:text-5xl lg:text-6xl p-2 text-center tracking-widest">Event Will Be Organized</div>
                 <div className="my-5">
                     <GiTimeTrap size={40} />
                 </div>
                 <div className="flex flex-row gap-4">
-                    {/* <motion.h2
-                        initial={{ y: -200, opacity: 0 }}
-                        animate={{ scale: 5, x: 50, y: 50, opacity: 1 }}
-                        transition={{ type: "spring", stiffness: 120 }}
-                    >
-                        hello framer
-                    </motion.h2> */}
-                    <div className="">
+                        <div className="">
 
                         <span className="text-4xl">222</span>
                         <span className="inline-block align-top">days</span>
@@ -209,7 +204,7 @@ const InvitationDetail = () => {
                     </motion.div>
                 </div>
             </div>
-        </div >
+        </div > */}
         <div className="flex grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
             <div className="">
 
@@ -350,20 +345,7 @@ const InvitationDetail = () => {
         {/* maps */}
 
 
-        <div className="flex justify-center items-center">
-            <div className="flex flex-col my-10 w-full justify-center items-center  ">
-
-                <span className="flex text-center text-lg my-4 text-">Marriage Location</span>
-
-                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3533.643838542647!2d85.31492999999999!3d27.666489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDM5JzU5LjQiTiA4NcKwMTgnNTMuOCJF!5e0!3m2!1sen!2snp!4v1696170454871!5m2!1sen!2snp" width="100%"
-                    height="450"
-                    className="border-0 mb-1"
-                    allowFullScreen
-                    loading="lazy"
-                ></iframe>
-            </div>
-
-        </div>
+        <WeddingLocation />
 
 
 

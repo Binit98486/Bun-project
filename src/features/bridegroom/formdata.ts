@@ -45,12 +45,15 @@ const bridegroomFormData: FormDataType[] = [
         maxLength: 50,
     },
     {
-        label: 'Instagram Id',
-        name: 'insta_id',
-        placeholder: 'instagram.com/name',
+        label: 'Additional Info',
+        name: 'additional_info',
+        placeholder: 'additional_info',
         required: true,
         maxLength: 50,
     },
+
+
+
 ];
 
 export default bridegroomFormData;

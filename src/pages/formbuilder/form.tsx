@@ -34,12 +34,14 @@ export default function FormBuilder({
 
     return (
         <div
-            className={`${length > 6
-                ? 'grid-cols-2'
-                : length > 4
-                    ? 'grid-cols-2'
-                    : 'w-1/2 grid-cols-1'
-                } grid gap-x-12 gap-y-8`}
+            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid gap-x-12 gap-y-8`}
+        // ${length > 6
+        //         ? 'grid-cols-3'
+        //         : length > 4
+        //             ? 'grid-cols-2'
+        //             : 'w-1/2 grid-cols-1'
+        //     } grid gap-x-12 gap-y-8
+
         >
             {formData && formData?.map((item: FormDataType, index: number) => {
                 const name = item?.name;

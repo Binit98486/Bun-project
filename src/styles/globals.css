@@ -47,6 +47,11 @@ html {
     display: none;
   }
 
+  /* Hide the horizontal scrollbar */
+  .overflow-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
   .no-scrollbar {
     -ms-overflow-style: none;
     /* IE and Edge */

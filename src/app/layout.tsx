@@ -17,7 +17,7 @@ export default function Layout({
     }, []);
     return (
         <>
-            <div className="bg-[#DBD6CB]">
+            <div className="">
 
                 {/* <Navbar /> */}
                 <div className="">

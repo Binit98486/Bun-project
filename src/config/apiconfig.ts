@@ -1,5 +1,5 @@
 
-let Base_URL = "http://192.168.18.5:8080";
+let Base_URL = "https://wedding-invitation-acu2.onrender.com";
 
 let apiEndPoints: {
     api: string;
@@ -15,7 +15,6 @@ function getApiEndPoints() {
                 api: Base_URL + "/api/v1/erp",
                 base: "/",
                 baseUrl: Base_URL,
-                // supportUrl: Support_Url + "/api/v1/erp",
             };
             break;
         case "production":
@@ -23,7 +22,6 @@ function getApiEndPoints() {
                 api: Base_URL + "/api/v1/erp",
                 base: "/",
                 baseUrl: Base_URL,
-                // supportUrl: Support_Url + "/api/v1/erp"
             };
             break;
 
@@ -32,7 +30,6 @@ function getApiEndPoints() {
                 api: Base_URL + "/api/v1/erp",
                 base: "/",
                 baseUrl: Base_URL,
-                // supportUrl: Support_Url + "/api/v1/erp"
             };
     }
     return apiEndPoints;

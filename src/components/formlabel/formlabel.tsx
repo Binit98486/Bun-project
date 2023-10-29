@@ -17,7 +17,7 @@ export default function FormLabel({
         <label
             className={classNames(
                 className,
-                'font-semibold text-gray-800 dark:text-gray-400'
+                'font-semibold text-gray-100 dark:text-gray-400'
             )}
         >
             {children}

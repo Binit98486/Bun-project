@@ -23,6 +23,7 @@ class AllService {
         }
     }
     public async Post(API: string, formData: any): Promise<ApiResponse> {
+
         try {
             const response = await (await request()).post(ApiEndPoints.api + API, JSON.stringify(formData))
             return response.data

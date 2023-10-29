@@ -7,11 +7,53 @@ import { motion } from "framer-motion";
 import final from "../../../public/assets/images/groom.jpg";
 import Image from "next/image";
 import Music from "@/components/components/music/music";
-function Test() {
+import Message from "@/components/components/design/message";
+import WeddingLocation from "@/components/components/map/map";
+import EventCountDown from "@/components/components/design/eventcountdown";
+import BrideGroom from "@/components/components/bridegroom/bridegroom";
+import EventDetail from "@/components/components/design/eventdetail";
+import Album from "@/components/components/design/album";
+import photo1 from "../../../public/assets/images/bride1.jpg"
+import photo2 from "../../../public/assets/images/bride2.jpg"
+import Video from "@/components/components/design/video";
+
+
+
+
+
+function TopDesign() {
+
+    const album = [
+        {
+            photo: photo1,
+
+        },
+        {
+            photo: photo2,
+
+        },
+        {
+            photo: photo1,
+
+        },
+        {
+            photo: photo2,
+
+        }, {
+            photo: photo1,
+
+        },
+        {
+            photo: photo2,
+
+        },
+
+    ]
+
     return (
         <div className="flex  w-full ">
             {/* left */}
-            <div className="relative flex w-0  xl:w-[900px] lg:w-[640px] md:w-[480px] lg:h-[313px] xl:h-[231px] md:h-[208px]">
+            <div className="relative flex w-0   xl:w-[900px] lg:w-[640px] md:w-[480px] lg:h-[313px] xl:h-[231px] md:h-[208px]">
                 {/* music */}
                 <div className="z-10  fixed  mt-10 ml-5">
                     <Music />
@@ -21,10 +63,10 @@ function Test() {
                         <div
                             className=" text-4xl "
                         >
-                            Hemant
+                            Simrn
                         </div>
                         <div className="ml-10 text-6xl font-semibold">&</div>
-                        <div className=" text-4xl ">Bigyat</div>
+                        <div className=" text-4xl ">Binit</div>
                     </div>
 
                 </div>
@@ -41,12 +83,20 @@ function Test() {
             <div className=" relative xl:w-[536px] lg:w-[380px] md:w-[288px] lg:h-[313px] xl:h-[347px] md:h-[180px]">
                 <div className="overflow-y-auto ">
                     <SigleImage />
-                    <Image src={left} alt="side" className="object-cover " />
+                    <Message />
+                    <EventCountDown className="text-2xl !important" />
+                    <BrideGroom />
+                    <EventDetail title="Reception" nepdate="शनिबार, २१ असोज २०८०" engdate="Saturday,8 October 2021"
+                        starttime="11:30 Am" endtime="3:30 Pm" location="Crystal Banquite,Manbhawan" />
+                    <EventDetail title="Wedding Day" nepdate="शनिबार, २१ असोज २०८०" engdate="Saturday,8 October 2021"
+                        starttime="11:30 Am" endtime="3:30 Pm" location="Crystal Banquite,Manbhawan" />
+                    <WeddingLocation address={"Wedding Location"} />
+                    <Album imgarray={album} />
+                    <Video />
                     {/* <SecondImage /> */}
                     {/* <img src={left} alt="side" className="object-cover" /> */}
 
 
-                    <Image src={final} alt="side1" className="object-cover w-[750px]" />
 
                     {/* <Lovestory /> */}
                 </div>
@@ -55,7 +105,7 @@ function Test() {
     );
 }
 
-export default Test;
+export default TopDesign;
 {
     /* <div className="absolute top-[200px] left-[550px]">
           <MenuItem />
@@ -98,10 +148,10 @@ function SigleImage() {
                             animate="visible"
                             className=" text-4xl font-semibold"
                         >
-                            Hemant
+                            Simran
                         </motion.div>
                         <div className="ml-10 ">&</div>
-                        <div className=" text-4xl font-semibold">Bigyat</div>
+                        <div className=" text-4xl font-semibold">Binit</div>
                     </div>
                     {/* Date & time of marriage */}
                     <div className="flex place-content-end ">

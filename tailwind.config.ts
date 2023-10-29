@@ -22,7 +22,9 @@ const config: Config = {
         "text-blue": "#000033",
         "text-peruvian": "#003333",
         "currency": "#3CCF4E",
-        "icon": "#071952"
+        "icon": "#071952",
+        'dark': '#292929',
+        'blue': "#2177a3"
       },
       fontFamily: {
         poppins: ["Poppins"],
